@@ -1,0 +1,67 @@
+body
+{
+    background-image: url(/src/image/peakpx.jpg);
+    background-size: 1550px;
+    max-width: 100%;
+}
+
+.navbar-brand
+{
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.navbar-brand img
+{
+    padding-left: 4px;
+}
+
+.form-group
+{
+    text-align: center;
+    display: block;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    max-width: 100%;
+}
+
+.form-group input
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    max-width: 100%;
+}
+
+.form-group
+{
+    margin-top: 1.5rem;
+}
+
+.form-group button
+{
+    
+    border-radius: 8px;
+    width: 200px;
+    text-decoration: none;
+    overflow: hidden;
+
+}
+
+.form-group button:hover
+{
+    color: white;
+    background-color: rgb(7, 71, 209);
+}
+
+.form-control
+{
+    width: 90%;
+    margin-left: 25px;
+    
+}

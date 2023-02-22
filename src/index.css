@@ -1,0 +1,110 @@
+
+body
+{
+
+    background: linear-gradient(to bottom right,#ffffff, #bfeed4 );
+}
+
+
+.navbar-brand
+{
+    font-family: 'Bebas Neue', cursive;
+    padding: 10px;
+}
+
+.navbar-brand a
+{
+    width: 100px;
+}
+
+.navbar-brand img
+{
+    padding-left: 4px;
+}
+
+.cart-box
+{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+
+}
+
+.cart-img
+{
+    width: 100px;
+    height:100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box
+{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title
+{
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.cart-price
+{
+    color: white;
+    font-weight: 500;
+    
+}
+
+.d-block
+{
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.carousel-caption
+{
+    padding-bottom: 50px;
+
+}
+
+
+.link-button button
+{
+    border-radius: 10px;
+    width: 100px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+
+.link-button button:hover
+{
+    background-color: rgb(30, 182, 75);
+    color: white;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+
+
+.card
+{
+    background-color: white;
+    box-shadow: 0 8px 32px 0 black;
+    padding: 20px;
+}
+
+
+.media
+{
+    padding: 20px;
+}
+
