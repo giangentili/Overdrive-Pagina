@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>SpiderWeb - Contact</title>
+    <link rel="shortcut icon" href="/src/image/spiderman.png" type="image/x-icon">
+
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-white" href="/src/index.html">SpiderWeb 
+            <img src="/src/image/spiderman.png" width="35" height="35" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="/src/index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/src/suits.html">Suits</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Curriculum
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Projects</a>
+                <a class="dropdown-item" href="#">Formation</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Mary Jane</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/src/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+
+      <form name="myForm">
+        <div class="form-group text-white">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" name="emailform" class="form-control" id="email" placeholder="Enter your mail">
+          <br> 
+          <label for="exampleFormControlTextarea1">Mesage</label>
+          <textarea class="form-control" id="mesage" rows="3" placeholder="Write here..."></textarea>
+          <br>
+
+          <label for="exampleFormControlInput1">Age:</label>
+          <input type="number" class="form-control" id="age" placeholder="choose your age...">
+          <br>
+          
+          <button onclick="mostrarEmail()" class="btn btn-light">Send</button>
+
+        </div>
+      </form>
+      <script src="/src/contact.js">
+    
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>  
+</body>
+</html>

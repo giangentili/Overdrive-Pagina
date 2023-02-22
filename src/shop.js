@@ -1,64 +1,76 @@
+import products from './products.json' assert {type: 'json'};
 
 
-function ready() {
-    //remove items
-    let removeCartButtons = document.getElementsByClassName('cart-remove');
-    console.log(removeCartButtons);
-    for (let i = 0; i < removeCartButtons.length; i++) {
-      let button = removeCartButtons[i];
-      button.addEventListener('click', removeCartItem);
-    }
-  
-    // Quantity Changes
-    let quantityInputs = document.getElementsByClassName('cart-quantity');
-    for (let i = 0; i < quantityInputs.length; i++) {
-      let input = quantityInputs[i];
-      input.addEventListener('change', quantityChanged);
-    }
-    // Add to Cart
-    let addCart = document.getElementsByClassName('add-cart');
-    for (let i = 0; i < addCart.length; i++) {
-      let button = addCart[i];
-      button.addEventListener('click', addCartClicked);
-    }
+  let cart = [ ]
+
+    renderCart()
+
+
+
+
+  function showProducts()
+  {
+
+    let productsRef = document.getElementById('products-container');
+
+    products.products.forEach((product) => {
+      productsRef.innerHTML += `
+      <div class="cart-one">
+        <div class="product-box">
+        <img src=${product.image} alt="" class="product-img">
+        <h2 class="product-title">${product.name}</h2>
+        <span class="price">${product.price}$</span>
+        <i class='bx bx-shopping-bag add-cart'></i> 
+        </div>
+      </div>`
+    })
+
+    setListeners();
   }
 
+function  addToCart(event){
+  let button = event.target;
+  let shopProducts = button.parentElement;
 
-  //add to cart
+  let product = {
+    name:  shopProducts.getElementsByClassName("product-title")[0].innerText,
+    image: shopProducts.getElementsByClassName("product-img")[0].src,
+    price: shopProducts.getElementsByClassName("price")[0].innerText
+  }
+ 
+  cart.push(product);
+  renderCart()
+  console.log(cart)
+}
 
-  function addCartClicked(event) {
-    let button = event.target;
-    let shopProducts = button.parentElement;
-    let title = shopProducts.getElementsByClassName('product-title')[0].innerText;
-    let price = shopProducts.getElementsByClassName('price')[0].innerText;
-    let productImg = shopProducts.getElementsByClassName('product-img')[0].src;
+function setListeners(){
+  let addCart = document.getElementsByClassName('add-cart');
   
-    addProductToCart(title, price, productImg);
-    updateTotal();
+  for (let i = 0; i < addCart.length; i++) {
+    let button = addCart[i];
+    button.addEventListener('click', addToCart);
   }
+}
+
+function renderCart()
+{
+  let cartRef = document.getElementById("my-cart")
+
+  cartRef.innerHTML = ''
   
-  function addProductToCart(title, price, productImg) {
-    productsAdded.push({ title, price, productImg });
-    showCart();
-  }
-  
-  function showCart() {
-    console.log('shopping cart');
-    let myCartRef = document.getElementById('my-cart');
-  
-    myCartRef.innerHTML = '';
-  
-    productsAdded.forEach((product) => {
-      myCartRef.innerHTML += `
-      <article class="cart-box">
-      <div class="product-box">
-      <img src="${product.productImg}" alt="" class="product-img">
-      <h2 class="product-title">${product.title}</h2>
-      <span class="price">${product.price}</span>
+  cart.forEach((product) => {
+    cartRef.innerHTML += `
+    <ul >
+      <li class="product-box">
+      <img width="80" src=${product.image} alt="">
+      <h2 class="product-title">${product.name}</h2>
+      <span class="price">${product.price}$</span>
       <i class='bx bx-shopping-bag add-cart'></i> 
-      <br>
-     </div>
-     </article>
-          `;
-    });
-  }
+      </li>
+    </ul>`
+  })
+
+}
+
+
+  showProducts();

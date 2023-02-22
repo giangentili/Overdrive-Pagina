@@ -33,6 +33,15 @@ body
 
 }
 
+.logo
+{
+    width: 100%;
+    max-width: 320px;
+}
+
+
+
+
 .cart-img
 {
     width: 100px;
@@ -66,6 +75,11 @@ body
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+carousel-item img
+{
+    border-radius: 20px;
 }
 
 .carousel-caption

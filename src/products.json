@@ -1,0 +1,24 @@
+{
+    "products": [
+        {
+        "name": "LOONEY TUNES SHIRT",
+        "image": "/images/shop2.jpg",
+        "price": 199
+        },
+        {
+        "name": "ROCK IN THE CITY SHIRT",
+        "image": "/images/shop3.jpg",
+        "price": 300
+        },
+        {
+        "name": "RUSTY SHIRT",
+        "image": "/images/shop4.jpg",
+        "price": 100
+        },
+        {
+        "name": "FENDER STRAT SHIRT",
+        "image": "/images/shop1.jpg",
+        "price": 200
+        }
+    ]
+}
